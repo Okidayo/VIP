@@ -20,6 +20,11 @@ hostname=*.yangjibao.com
 ***********************************/
 
 var body = $response.body.replace(/vip_label":false/g, 'vip_label":true')
-						 .replace(/vip_expiry_date":"2022-12-28"/g, 'vip_expiry_date":"2099-12-31"')
+						 .replace(/open_free_vip_sign":false/g, 'open_free_vip_sign":true')
+						 .replace(/subscribe_status":"0"/g, 'subscribe_status":"1"')
+						 .replace(/vip_expiry_date":null/g, 'vip_expiry_date":"2099-12-31"') 
+						 .replace(/has_stock_hold":false/g, 'has_stock_hold":true') 
+						 .replace(/has_stock_option":false/g, 'has_stock_option":true') 
+						 .replace(/show_bkxh":false/g, 'show_bkxh":true') 
 						 .replace(/is_pay":false/g, 'is_pay":true');
 $done({ body });
